@@ -38,8 +38,9 @@ body {
 
 .input-loginstructor {
   width: 100%;
+  min-height: 48px;
   padding: 12px;
-  padding-left: 3rem;   /* ✅ más espacio para ícono */
+  padding-left: 3rem;   /* espacio fijo para ícono */
   border: 2px solid #aaa;
   border-radius: 8px;
   outline: none;
@@ -63,9 +64,9 @@ body {
 /* Iconos */
 .icon {
   position: absolute;
-  left: 0.9rem;         /* un poco más separado */
-  top: 50%;             /* ✅ centrado vertical */
-  transform: translateY(-50%);
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%); /* centrado vertical */
   fill: #9e9ea7;
   width: 1.2rem;
   height: 1.2rem;
@@ -75,7 +76,7 @@ body {
 .icon-eye {
   position: absolute;
   right: 0.9rem;
-  top: 50%;             /* ✅ centrado vertical */
+  top: 50%;
   transform: translateY(-50%);
   fill: #9e9ea7;
   width: 1.4rem;
@@ -195,9 +196,14 @@ body {
     width: 90%;
     margin: auto;
   }
+  .input-loginstructor {
+    font-size: 14px;
+    padding: 10px;
+    padding-left: 3rem;   /* ✅ mantener espacio para ícono */
+  }
   .button-group {
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
   }
   .btn,
   .btn-2 {
