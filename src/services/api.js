@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:4000/api",
+  baseURL: "https://examenes-app-354o.onrender.com",
   withCredentials: false, // No necesitamos cookies en este caso
   headers: { "Content-Type": "application/json" },
 });
