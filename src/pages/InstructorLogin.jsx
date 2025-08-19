@@ -10,7 +10,7 @@ export default function InstructorLogin() {
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // <- evita que el form intente navegar
     try {
       const res = await API.post("/auth/instructor/login", { usuario, password });
 
