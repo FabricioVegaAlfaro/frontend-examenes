@@ -38,7 +38,7 @@ body {
 .input-loginstructor {
   width: 100%;
   padding: 12px;
-  padding-left: 2.5rem;
+  padding-left: 3rem;   /* ✅ más espacio para ícono */
   border: 2px solid #aaa;
   border-radius: 8px;
   outline: none;
@@ -46,6 +46,7 @@ body {
   color: #0d0c22;
   transition: 0.3s ease;
   font-size: 15px;
+  line-height: 1.4;
 }
 
 .input-loginstructor::placeholder {
@@ -61,7 +62,9 @@ body {
 /* Iconos */
 .icon {
   position: absolute;
-  left: 0.8rem;
+  left: 0.9rem;         /* un poco más separado */
+  top: 50%;             /* ✅ centrado vertical */
+  transform: translateY(-50%);
   fill: #9e9ea7;
   width: 1.2rem;
   height: 1.2rem;
@@ -70,7 +73,9 @@ body {
 
 .icon-eye {
   position: absolute;
-  right: 0.8rem;
+  right: 0.9rem;
+  top: 50%;             /* ✅ centrado vertical */
+  transform: translateY(-50%);
   fill: #9e9ea7;
   width: 1.4rem;
   height: 1.4rem;

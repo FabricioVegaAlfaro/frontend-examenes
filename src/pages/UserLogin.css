@@ -162,8 +162,9 @@ body {
 @media (max-width: 768px) {
   .user-login-container {
     padding: 20px;
-    width: 90%;
-    margin: auto;
+    width: 100%;      /* ocupa el 100% del ancho */
+    max-width: 400px; /* pero nunca más que el diseño original */
+    margin: auto;     /* centrado automático */
   }
   .button-group {
     flex-direction: column;
