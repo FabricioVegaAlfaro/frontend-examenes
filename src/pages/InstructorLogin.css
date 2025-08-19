@@ -174,7 +174,7 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .instructor-login-container {
     padding: 20px;
     width: 90%;
@@ -183,29 +183,6 @@ body {
   .button-group {
     flex-direction: column;
     gap:10px;
-  }
-  .btn,
-  .btn-2 {
-    width: 100%;
-    min-width: unset;
-  }
-}
-
-@media (max-width: 480px) {
-  .instructor-login-container {
-    padding: 20px;
-    width: 90%;
-    margin: auto;
-  }
-  .input-loginstructor {
-    font-size: 14px;
-    min-height: 48px;    /* ✅ aseguramos altura mínima en móvil */
-    padding: 10px;
-    padding-left: 3rem;  /* mantenemos espacio para ícono */
-  }
-  .button-group {
-    flex-direction: column;
-    gap: 10px;
   }
   .btn,
   .btn-2 {
