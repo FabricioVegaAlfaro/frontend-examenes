@@ -43,7 +43,7 @@ export default function UsuarioLogin() {
           <input
             className="input-user"
             type="text"
-            placeholder="Nombre completo tal y como aparece en la cédula"
+            placeholder="Nombre completo tal y como aparece tu cédula"
             value={nombreCompleto}
             onChange={(e) => setNombreCompleto(e.target.value)}
           />
