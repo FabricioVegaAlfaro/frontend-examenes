@@ -19,11 +19,13 @@ body {
   background-color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   animation: fadeIn 0.6s ease-in-out;
+  margin: 20px; /* Evita que quede pegado en pantallas pequeñas */
 }
 
 .user-login-container h2 {
   margin-bottom: 20px;
   color: #333;
+  font-size: clamp(18px, 2vw, 24px); /* Escala según pantalla */
 }
 
 /* Grupo input */
@@ -45,7 +47,7 @@ body {
   background-color: #f3f3f4;
   color: #0d0c22;
   transition: 0.3s ease;
-  font-size: 15px;
+  font-size: clamp(14px, 1.5vw, 16px); /* Escalable */
 }
 
 .input-user::placeholder {
@@ -82,7 +84,7 @@ body {
   flex: 1;
   min-width: 140px;
   padding: 12px;
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px); /* Escalable */
   font-weight: 700;
   border-radius: 12px;
   cursor: pointer;
@@ -147,24 +149,35 @@ body {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .user-login-container {
     padding: 20px;
     width: 90%;
   }
-  .user-login-container h2 {
-    font-size: 20px;
-  }
-  .input-user {
-    font-size: 14px;
-    padding: 10px;
-  }
   .button-group {
     flex-direction: column;
+    gap: 10px;
   }
   .btn,
   .btn-2 {
     width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  body {
+    padding: 10px; /* asegura que no quede pegado */
+  }
+  .user-login-container {
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .input-user {
+    padding: 10px;
+  }
+  .button-group {
+    gap: 8px;
   }
 }
