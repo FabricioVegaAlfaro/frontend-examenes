@@ -162,8 +162,8 @@ body {
 @media (max-width: 768px) {
   .user-login-container {
     padding: 20px;
-    width: 100%;
-    align-self: center;
+    width: 90%;
+    margin: auto;
   }
   .button-group {
     flex-direction: column;
@@ -180,7 +180,8 @@ body {
 @media (max-width: 480px) {
   .user-login-container {
     padding: 20px;
-    width: 100%;
+    width: 90%;
+    margin: auto;
   }
   .button-group {
     flex-direction: column;
