@@ -40,18 +40,23 @@ body {
 .input-user {
   width: 100%;
   padding: 12px;
-  padding-left: 2.5rem;
+  padding-left: 3rem; /* MÁS espacio para que el texto no choque con el icono */
   border: 2px solid #aaa;
   border-radius: 8px;
   outline: none;
   background-color: #f3f3f4;
   color: #0d0c22;
   transition: 0.3s ease;
-  font-size: clamp(14px, 1.5vw, 16px); /* Escalable */
+  font-size: 15px;
+  line-height: 1.4; /* mejor altura de texto */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* si llega a ser demasiado largo, que no se monte */
 }
 
 .input-user::placeholder {
   color: #9e9ea7;
+  white-space: normal; /* permite que se parta en varias líneas si hace falta */
 }
 
 .input-user:focus {
@@ -64,6 +69,8 @@ body {
 .icon {
   position: absolute;
   left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%); /* centra mejor el icono verticalmente */
   fill: #9e9ea7;
   width: 1.2rem;
   height: 1.2rem;
