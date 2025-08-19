@@ -1,0 +1,194 @@
+.exam-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.exam-container h2 {
+  margin-bottom: 15px;
+}
+
+.exam-container p {
+  font-size: 18px;
+}
+
+.exam-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.exam-container li {
+  margin: 10px 0;
+}
+
+.exam-container button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* 🔹 Botones (mismos que el panel) */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.button-group .btn,
+.button-group .btn-2 {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: rgb(0, 0, 0);
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+  margin: 0px 0; /* 🔹 Margen arriba y abajo */
+  min-width: 120px;
+  text-align: center;
+}
+
+/* 🔹 Botón azul */
+.button-group .btn {
+  border: 3px solid rgb(65, 81, 255);
+}
+
+.button-group .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(65, 81, 255);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.button-group .btn:hover::before {
+  transform: translateX(0);
+}
+
+.button-group .btn:hover {
+  color: white;
+}
+
+/* 🔹 Botón rojo */
+.button-group .btn-2 {
+  border: 3px solid rgb(249, 48, 48);
+}
+
+.button-group .btn-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(249, 48, 48);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.button-group .btn-2:hover::before {
+  transform: translateX(0);
+}
+
+.button-group .btn-2:hover {
+  color: white;
+}
+
+/* 🔹 Fondo tipo login */
+body {
+  background: linear-gradient(135deg, #4151ff, #6e8bff, #a5b8ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* 🔹 Caja central */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home-box {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.home-box h1 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.home-box p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+
+/* 🔹 Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsividad */
+@media (max-width: 480px) {
+  .instructor-login-container {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .instructor-login-container h2 {
+    font-size: 20px;
+  }
+
+  .instructor-login-container input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .button-group {
+    flex-direction: column; /* 🔹 Botones en columna en pantallas pequeñas */
+    gap: 15px;
+  }
+
+  .button-group .btn,
+  .button-group .btn-2 {
+    width: 100%; /* 🔹 Ocupan todo el ancho en móvil */
+  }
+}

@@ -1,0 +1,170 @@
+/* Fondo igual al del login */
+body {
+  background: linear-gradient(135deg, #4151ff, #6e8bff, #a5b8ff);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* Caja principal */
+.user-login-container {
+  max-width: 400px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.user-login-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grupo input */
+.group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-user {
+  width: 100%;
+  padding: 12px;
+  padding-left: 2.5rem;
+  border: 2px solid #aaa;
+  border-radius: 8px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: 0.3s ease;
+  font-size: 15px;
+}
+
+.input-user::placeholder {
+  color: #9e9ea7;
+}
+
+.input-user:focus {
+  border-color: rgb(65, 81, 255);
+  box-shadow: 0 0 6px rgba(65, 81, 255, 0.4);
+  background-color: #fff;
+}
+
+/* Iconos */
+.icon {
+  position: absolute;
+  left: 0.8rem;
+  fill: #9e9ea7;
+  width: 1.2rem;
+  height: 1.2rem;
+  pointer-events: none;
+}
+
+/* Botones (reutilizados del login) */
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn,
+.btn-2 {
+  flex: 1;
+  min-width: 140px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
+}
+
+/* Botón azul */
+.btn {
+  border: 3px solid rgb(65, 81, 255);
+  color: black;
+  background: transparent;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgb(65, 81, 255);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.btn:hover::before {
+  transform: translateX(0);
+}
+.btn:hover { color: white; }
+
+/* Botón rojo */
+.btn-2 {
+  border: 3px solid rgb(249, 48, 48);
+  color: black;
+  background: transparent;
+}
+.btn-2::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgb(249, 48, 48);
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+.btn-2:hover::before {
+  transform: translateX(0);
+}
+.btn-2:hover { color: white; }
+
+/* Error */
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .user-login-container {
+    padding: 20px;
+    width: 90%;
+  }
+  .user-login-container h2 {
+    font-size: 20px;
+  }
+  .input-user {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .button-group {
+    flex-direction: column;
+  }
+  .btn,
+  .btn-2 {
+    width: 100%;
+  }
+}
