@@ -188,3 +188,20 @@ body {
     min-width: unset;
   }
 }
+
+@media (max-width: 768px) {
+  .instructor-login-container {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+  }
+  .button-group {
+    flex-direction: column;
+    gap:10px;
+  }
+  .btn,
+  .btn-2 {
+    width: 100%;
+    min-width: unset;
+  }
+}

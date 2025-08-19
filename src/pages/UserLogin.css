@@ -176,3 +176,21 @@ body {
     min-width: unset;
   }
 }
+
+/* Responsive */
+@media (max-width: 480px) {
+  .user-login-container {
+    padding: 20px;
+    width: 90%;
+    margin: auto;
+  }
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn,
+  .btn-2 {
+    width: 100%;
+    min-width: unset;
+  }
+}
