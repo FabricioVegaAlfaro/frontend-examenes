@@ -38,9 +38,9 @@ body {
 
 .input-loginstructor {
   width: 100%;
-  min-height: 48px;
+  min-height: 48px;       /* ✅ altura mínima */
   padding: 12px;
-  padding-left: 3rem;   /* espacio fijo para ícono */
+  padding-left: 3rem;     /* espacio para ícono */
   border: 2px solid #aaa;
   border-radius: 8px;
   outline: none;
@@ -49,6 +49,7 @@ body {
   transition: 0.3s ease;
   font-size: 15px;
   line-height: 1.4;
+  box-sizing: border-box; /* ✅ asegura que padding no reduzca altura */
 }
 
 .input-loginstructor::placeholder {
@@ -66,7 +67,7 @@ body {
   position: absolute;
   left: 0.9rem;
   top: 50%;
-  transform: translateY(-50%); /* centrado vertical */
+  transform: translateY(-50%); /* ✅ centrado vertical real */
   fill: #9e9ea7;
   width: 1.2rem;
   height: 1.2rem;
@@ -198,8 +199,9 @@ body {
   }
   .input-loginstructor {
     font-size: 14px;
+    min-height: 48px;    /* ✅ aseguramos altura mínima en móvil */
     padding: 10px;
-    padding-left: 3rem;   /* ✅ mantener espacio para ícono */
+    padding-left: 3rem;  /* mantenemos espacio para ícono */
   }
   .button-group {
     flex-direction: column;
