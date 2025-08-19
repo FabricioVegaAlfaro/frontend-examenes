@@ -19,6 +19,7 @@ body {
   background-color: #ffffff;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
   animation: fadeIn 0.6s ease-in-out;
+  margin: 20px;
 }
 
 .instructor-login-container h2 {
@@ -171,27 +172,19 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .instructor-login-container {
     padding: 20px;
     width: 90%;
+    margin: auto;
   }
-
-  .instructor-login-container h2 {
-    font-size: 20px;
-  }
-
-  .input-loginstructor {
-    font-size: 14px;
-    padding: 10px;
-  }
-
   .button-group {
     flex-direction: column;
+    gap:10px;
   }
-
   .btn,
   .btn-2 {
     width: 100%;
+    min-width: unset;
   }
 }
