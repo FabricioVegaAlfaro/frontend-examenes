@@ -87,6 +87,9 @@ export default function InstructorPanel() {
         <a className="btn" onClick={() => cargarIntentos()}>
           Refrescar
         </a>
+        <a className="btn" onClick={() => navigate("/upload-video")}>
+          Subir Video
+        </a>
         <a className="btn-logout" onClick={cerrarSesion}>
           Cerrar Sesión
         </a>

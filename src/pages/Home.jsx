@@ -16,6 +16,9 @@ export default function Home() {
           <button className="btn-2" onClick={() => navigate("/usuario")}>
             Soy Usuario
           </button>
+          <button className="btn" onClick={() => navigate("/videos")}>
+            Videos
+          </button>
         </div>
       </div>
     </div>

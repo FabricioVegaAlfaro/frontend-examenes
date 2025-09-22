@@ -4,6 +4,8 @@ import InstructorLogin from "./pages/InstructorLogin";
 import UserLogin from "./pages/UserLogin";
 import Exam from "./pages/Exam";
 import InstructorPanel from "./pages/InstructorPanel";
+import Videos from "./pages/Videos";
+import UploadVideo from "./pages/UploadVideo";
 import "./App.css";
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
         <Route path="/usuario" element={<UserLogin />} />
         <Route path="/examen" element={<Exam />} />
         <Route path="/panel-instructor" element={<InstructorPanel />} />
+        <Route path="/videos" element={<Videos />} />
+        <Route path="/upload-video" element={<UploadVideo />} />
       </Routes>
     </Router>
   );
